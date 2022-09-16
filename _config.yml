@@ -23,7 +23,7 @@ email: info@meowcorp.net
 description: >- # this means to ignore newlines until the next key.
   Meowcorp is not a real company.
 copyright: >-
-  © 2022 Meowcorp.
+  © 2022 Meowcorp. GNU GPL v3.0
 domain: www.meowcorp.net
 url: https://www.meowcorp.net # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: / # the subpath of your site, e.g. /blog
