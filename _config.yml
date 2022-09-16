@@ -40,9 +40,9 @@ kramdown:
   input: Kramdown
 
 # Collections
-collections:
-  projects:
-    output: true
+# collections:
+#   projects:
+#     output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -63,3 +63,5 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - README.md
