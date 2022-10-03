@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.c-navbar-desktop li {
+	@apply inline mr-3;
+}
+
+.c-skipmain {
+	@apply absolute top-auto w-1 h-1 overflow-hidden;
+}
+
+.c-skipmain:focus {
+	@apply static w-auto h-auto;
+}
