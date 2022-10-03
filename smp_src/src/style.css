@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.c-img-cover {
+	background-position: center -250px;
+}
+
 .c-navbar-desktop li {
 	@apply inline mr-3;
 }
