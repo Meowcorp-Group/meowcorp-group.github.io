@@ -5,21 +5,26 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:site_name" content="Meowcorp">
+	<!-- Open Graph Protocol https://ogp.me -->
+	<meta property="og:site_name" content="Meowcorp">	
 	<meta property="og:title" content="MeowcorpSMP Gen 2">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://www.meowcorp.net/smp/">
 	<meta property="og:image" content="https://www.meowcorp.net/assets/logo.png">
 	<meta property="og:description" content="The classic Meowcorp experience. Now with mods.">
+
 	<link href="dist/style.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="/assets/logo.png">
+
+	<script src="script.js" defer></script>
 	<script src="https://kit.fontawesome.com/0603dc53cb.js" crossorigin="anonymous"></script>
+
 	<title>MeowcorpSMP Gen 2</title>
 </head>
 
 <body class="bg-[#111111]">
-	<a href="#main" class="c-skipmain">Skip to main content</a>
-	<header class="p-3 bg-gray-900 flex items-center shadow-lg">
+	<a href="#main" class="bg-white text-black p-2 absolute -left-full focus:static">Skip to main content</a>
+	<header id="header" class="p-3 bg-gray-900 flex items-center shadow-lg sticky top-0">
 		<a class="flex items-center" href="/smp">
 			<!-- <img class="h-6 mr-2" src="/assets/logo.png" alt="New Meowcorp Logo"> -->
 			<!-- <span class="text-2xl text-white">MeowcorpSMP</span> -->
@@ -118,7 +123,9 @@
 			</section>
 		</article>
 	</main>
-	<footer></footer>
+	<footer class="max-w-7xl mx-auto shadow-lg">
+		<h1>hi world</h1>
+	</footer>
 </body>
 
 </html>

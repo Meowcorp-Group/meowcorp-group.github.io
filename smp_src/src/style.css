@@ -21,3 +21,11 @@
 .c-skipmain:focus {
 	@apply static w-auto h-auto;
 }
+
+.c-header-sticky {
+	@apply fixed w-full
+}
+
+.c-header-sticky + #main {
+	@apply pt-8
+}
