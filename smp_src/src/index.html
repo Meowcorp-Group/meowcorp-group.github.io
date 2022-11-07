@@ -13,7 +13,7 @@
 	<meta property="og:image" content="https://www.meowcorp.net/assets/logo.png">
 	<meta property="og:description" content="The classic Meowcorp experience. Now with mods.">
 
-	<link href="dist/style.css" rel="stylesheet">
+	<link href="dist.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="/assets/logo.png">
 
 	<script src="script.js" defer></script>
@@ -39,22 +39,31 @@
 						<a href="">Home</a>
 					</li>
 					<li>
-						<a href="">Modpack</a>
+						<a href="install/">Install</a>
 					</li>
 					<li>
-						<a href="https://discord.gg/rUjCcZhkk7">Discord</a>
-						<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						<a href="https://discord.gg/rUjCcZhkk7">
+							<span>Discord</span>
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+
 					</li>
 					<li>
-						<a href="/">Back to Meowcorp</a>
-						<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						<a href="/">
+							<span>Back to Meowcorp</span>
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+
 					</li>
 				</ul>
 			</nav>
 		</div>
 		<div class="flex items-center ml-auto">
 			<nav class="mr-3 text-white c-navbar-mobile block md:hidden">
-				<i class="fa-solid fa-bars"></i>
+				<a href="" onclick="alert('a')">
+					<span>Open menu</span>
+					<i class="fa-solid fa-bars"></i>
+				</a>
 			</nav>
 		</div>
 	</header>
@@ -62,30 +71,40 @@
 		<article>
 			<div class="c-img-cover bg-fixed bg-cover bg-no-repeat shadow-lg"
 				style="background-image: url('https://cdn.discordapp.com/attachments/812822210354872351/1026510003709939712/2022-10-01_17.19.37.png');">
-				<div class="h-96 p-6">
-					<div class="text-center">
-						<h1>
-							<img class="h-40 m-auto" alt="MeowcorpSMP Generation 2 With Icons Logo"
-								src="https://cdn.discordapp.com/attachments/812822210354872351/1035937335256285184/smp-withicons-trim.png">
-						</h1>
-						<h1 class="text-4xl text-white mt-3">
+				<div class="h-96 p-6 text-center flex flex-col">
+					<h1 class="h-40 max-h-40 max-w-full">
+						<img class="h-40 max-h-40 max-w-full m-auto object-scale-down"
+							alt="MeowcorpSMP Generation 2 With Icons Logo"
+							src="https://cdn.discordapp.com/attachments/812822210354872351/1035937335256285184/smp-withicons-trim.png">
+					</h1>
+					<!-- <h1 class="text-4xl text-white mt-3">
 							<span class="bg-black/60 inline-block p-2 rounded-lg">MeowcorpSMP Generation&nbsp;2.</span>
-						</h1>
-						<p class="text-2xl text-white mt-3">
-							<span class="bg-black/60 inline-block p-2 rounded-lg">The classic Meowcorp experience, now
-								with
-								mods.</span>
-						</p>
-						<button
-							class="bg-gradient-to-r from-cyan-800 to-blue-800 mt-3 p-2 rounded-lg text-white">Download
-							Now</button>
-					</div>
+						</h1> -->
+					<p class="text-2xl text-white mt-3">
+						<span class="bg-black/60 inline-block p-2 rounded-lg">The classic Meowcorp experience, now
+							with
+							mods.</span>
+					</p>
+					<button
+						class="self-center bg-gradient-to-r from-cyan-800 to-blue-800 mt-3 p-2 rounded-lg text-white">
+						Download Now</button>
 				</div>
 			</div>
-			<section class="flex flex-col sm:flex-row p-4 bg-blue-300">
-				<img class="sm:max-w-[50%] object-cover rounded-lg"
-					src="https://cdn.discordapp.com/attachments/789208006067093595/862704806052757534/8.png">
-				<div class="sm:mx-6 my-3 text-gray-900">
+			<section class="flex flex-col md:flex-row p-4 bg-blue-300">
+				<div class="md:max-w-[50%] relative">
+					<button class="carousel-btn carousel-prev absolute bg-black p-1">Previous</button>
+					<button class="carousel-btn carousel-next absolute right-0 bg-black p-1">Next</button>
+					<div class="carousel overflow-hidden rounded-lg flex snap-mandatory snap-both">
+
+						<img class="object-cover rounded-lg snap-center"
+							src="https://cdn.discordapp.com/attachments/812822210354872351/1039177063711653939/techmod-50.png">
+						<img class="object-cover rounded-lg snap-center"
+							src="https://cdn.discordapp.com/attachments/812822210354872351/1039180401274519663/magicmod-50.png">
+					</div>
+					
+				</div>
+
+				<div class="md:mx-6 my-3 text-gray-900">
 					<h2 class="text-4xl mb-2">Your favorite mods</h2>
 					<p>MeowcorpSMP contains your favorite Fabric mods.</p>
 					<br>
@@ -128,7 +147,7 @@
 		</article>
 	</main>
 	<footer class="max-w-7xl mx-auto shadow-lg">
-		<h1>hi world</h1>
+		<p>© Meowcorp Group</p>
 	</footer>
 </body>
 
