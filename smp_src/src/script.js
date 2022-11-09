@@ -11,7 +11,7 @@ document.querySelectorAll('.carousel').forEach((carousel, i) => {
 
 	carousels[i].getPositions = () => {
 		carousels[i].positions = [];
-		carousel.querySelectorAll('img').forEach((img) => {
+		carousel.querySelectorAll('div').forEach((img) => {
 			carousels[i].positions.push([
 				img.offsetLeft,
 				img.offsetLeft + img.offsetWidth,
