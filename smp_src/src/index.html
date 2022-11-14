@@ -92,13 +92,17 @@
 			</div>
 			<section class="flex flex-col md:flex-row p-4 bg-blue-300">
 				<div class="md:max-w-[50%] relative">
-					<button class="carousel-btn carousel-prev absolute bg-black p-2 rounded-r-lg top-1/2 -translate-y-1/2 z-20">
-						<i class="fa-solid fa-less-than"></i>
-					</button>
-					<button
-						class="carousel-btn carousel-next absolute right-0 bg-black p-2 rounded-l-lg top-1/2 -translate-y-1/2 z-20">
-						<i class="fa-solid fa-greater-than"></i>
-					</button>
+					<div>
+						<button
+							class="carousel-btn carousel-prev absolute bg-black p-2 rounded-r-lg top-1/2 -translate-y-1/2 z-20">
+							<i class="fa-solid fa-arrow-left"></i>
+						</button>
+						<button
+							class="carousel-btn carousel-next absolute right-0 bg-black p-2 rounded-l-lg top-1/2 -translate-y-1/2 z-20">
+							<i class="fa-solid fa-arrow-right"></i>
+						</button>
+					</div>
+					<div class="carousel-dots"></div>
 					<div class="carousel overflow-hidden rounded-lg flex snap-mandatory snap-both">
 						<div class="snap-center rounded-lg flex flex-col min-w-full min-h-full aspect-video">
 							<svg width="960" height="540"></svg>
@@ -110,6 +114,7 @@
 							<img class="object-cover rounded-lg"
 								src="https://cdn.discordapp.com/attachments/812822210354872351/1039180401274519663/magicmod-50.png">
 						</div>
+
 					</div>
 
 				</div>

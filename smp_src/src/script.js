@@ -7,7 +7,7 @@ let carousels = {
 };
 
 document.querySelectorAll('.carousel').forEach((carousel, i) => {
-	carousels[i] = {}
+	carousels[i] = {};
 
 	carousels[i].getPositions = () => {
 		carousels[i].positions = [];
@@ -21,7 +21,11 @@ document.querySelectorAll('.carousel').forEach((carousel, i) => {
 	};
 	carousels[i].getPositions();
 
-	carousels[i].move = function(direction)  {
+	carousels[i].scroll = (positions) => {
+		
+	}
+
+	carousels[i].move = (direction) => {
 		carousels[i].currentScrollLeft = carousel.scrollLeft;
 		carousels[i].currentScrollright =
 			carousel.scrollLeft + carousel.offsetWidth;
@@ -59,20 +63,52 @@ document.querySelectorAll('.carousel').forEach((carousel, i) => {
 				left: carousels[i].positions[carousels[i].currentItem][0],
 				behavior: 'smooth',
 			});
-		} catch(e) {}
+		} catch (e) {
+			if (carousels[i].currentItem < 0) {
+				carousels[i].currentItem = carousels[i].positions.length - 1;
+				carousel.scrollTo({
+					left: carousels[i].positions[carousels[i].currentItem][0],
+					behavior: 'smooth',
+				});
+			} else {
+				carousels[i].currentItem = 0;
+				carousel.scrollTo({
+					left: carousels[i].positions[carousels[i].currentItem][0],
+					behavior: 'smooth',
+				});
+			}
+		}
+
+		carousels[i].moveTo = (position) => {
+
+		}
 	};
 
-	carousel.parentElement.querySelectorAll('.carousel-btn').forEach((button) => {
-		if (button.classList.contains('carousel-next')) {
-			button.addEventListener('click', () => {
-				carousels[i].move('next');
-			});
-		} else if (button.classList.contains('carousel-prev')) {
-			button.addEventListener('click', () => {
-				carousels[i].move('prev');
-			});
+	carousel.parentElement
+		.querySelectorAll('.carousel-btn')
+		.forEach((button) => {
+			if (button.classList.contains('carousel-next')) {
+				button.addEventListener('click', () => {
+					carousels[i].move('next');
+				});
+			} else if (button.classList.contains('carousel-prev')) {
+				button.addEventListener('click', () => {
+					carousels[i].move('prev');
+				});
+			}
+		});
+	
+	carousel.parentElement.querySelectorAll('.carousel-dots').forEach((dots) => {
+		let dot = document.createElement('div');
+		dot.classList.add('carousel-dot');
+		for (let j = 0; j < carousels[i].positions.length; j++) {
+			console.log(j)
 		}
-	});
+	})
 
 	window.addEventListener('resize', carousels[i].getPositions());
+
+	setInterval(() => {
+		carousels[i].move('next');
+	}, 4000);
 });
